@@ -16,8 +16,13 @@ class EpisodeViewController: UIViewController {
     
     @IBOutlet weak var episodeDescriptionView: UITextView!
     
+    @IBOutlet weak var overviewText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        episodeDescriptionView.textContainer.lineFragmentPadding = 0
+        episodeDescriptionView.textContainerInset = UIEdgeInsetsZero
 
         episodeNameView.text = "Episosio Piloto"
     }
