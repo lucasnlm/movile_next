@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A385C0A-C153-400A-818D-BE43CBAB6DDD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MovileNext</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>97A45482135BE6F0B5FCCC5E5B5F2A063F164A9C</key>
+		<string>https://github.com/marcelofabri/movile-up.git</string>
+		<key>A58B3B3838B29FF02070CC578380E3F5177E2238</key>
+		<string>https://github.com/lucasnunes/MovileNext.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MovileNext.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>97A45482135BE6F0B5FCCC5E5B5F2A063F164A9C</key>
+		<string>../../movile-up</string>
+		<key>A58B3B3838B29FF02070CC578380E3F5177E2238</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lucasnunes/MovileNext.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A58B3B3838B29FF02070CC578380E3F5177E2238</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>97A45482135BE6F0B5FCCC5E5B5F2A063F164A9C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>movile-up</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A58B3B3838B29FF02070CC578380E3F5177E2238</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MovileNext</string>
+		</dict>
+	</array>
+</dict>
+</plist>

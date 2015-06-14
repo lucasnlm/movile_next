@@ -16,6 +16,8 @@
 		CE0FF55A1B2CAE2D00C18F84 /* UIColor+MovileNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FF5591B2CAE2D00C18F84 /* UIColor+MovileNext.swift */; };
 		CE0FF55C1B2CB00400C18F84 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FF55B1B2CB00400C18F84 /* CustomNavigationController.swift */; };
 		CE0FF55E1B2CB12700C18F84 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FF55D1B2CB12700C18F84 /* EpisodeViewController.swift */; };
+		CE9136E11B2DC0CB00BDE676 /* EpisodesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9136E01B2DC0CB00BDE676 /* EpisodesListViewController.swift */; };
+		CE9136E31B2DCCA200BDE676 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9136E21B2DCCA200BDE676 /* EpisodeTableViewCell.swift */; };
 		E8FF8C3F80700FFAD19E5B8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E48EEEFF2BA83D0A4DF26E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		CE0FF5591B2CAE2D00C18F84 /* UIColor+MovileNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+MovileNext.swift"; path = "../../../movile-up/src/UIColor+MovileNext.swift"; sourceTree = "<group>"; };
 		CE0FF55B1B2CB00400C18F84 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CE0FF55D1B2CB12700C18F84 /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		CE9136E01B2DC0CB00BDE676 /* EpisodesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesListViewController.swift; sourceTree = "<group>"; };
+		CE9136E21B2DCCA200BDE676 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		DDD98453BF790A4B9184E36E /* Storyboards.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		E5551EDEE89AF8356B576F0F /* MovileNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C19D72E37DA3C88661834C /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		5889A7D5A6BD21379211491B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE9136E21B2DCCA200BDE676 /* EpisodeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			children = (
 				CE0FF55B1B2CB00400C18F84 /* CustomNavigationController.swift */,
 				CE0FF55D1B2CB12700C18F84 /* EpisodeViewController.swift */,
+				CE9136E01B2DC0CB00BDE676 /* EpisodesListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,10 +410,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9136E31B2DCCA200BDE676 /* EpisodeTableViewCell.swift in Sources */,
 				CE0FF55C1B2CB00400C18F84 /* CustomNavigationController.swift in Sources */,
 				CE0FF55E1B2CB12700C18F84 /* EpisodeViewController.swift in Sources */,
 				6DD31B72EE7556359B02615A /* AppDelegate.swift in Sources */,
 				8F3C72F66C0FC1F75E5AB491 /* Storyboards.swift in Sources */,
+				CE9136E11B2DC0CB00BDE676 /* EpisodesListViewController.swift in Sources */,
 				C3EEE1A0D842B3BE5A8798CB /* Main.storyboard in Sources */,
 				CE0FF55A1B2CAE2D00C18F84 /* UIColor+MovileNext.swift in Sources */,
 				BAAF7D53BECD391D2C30FD79 /* LaunchScreen.xib in Sources */,
@@ -480,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -560,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
