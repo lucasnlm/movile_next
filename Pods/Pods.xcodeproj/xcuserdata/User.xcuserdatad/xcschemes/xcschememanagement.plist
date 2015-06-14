@@ -4,6 +4,51 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-MovileNext-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-Argo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-Box.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-ISO8601DateFormatter.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-Runes.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-TraktModels-TraktModels.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext-TraktModels.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MovileNext.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-unit_tests-Nimble.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +67,62 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>89910C2CE922711BE1A1D203</key>
+		<key>07D353EEF36CEE7B420970B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99009078C223489889075146</key>
+		<key>15AA3751A395290894F0B478</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4676BC8D0947C41C31EEABD</key>
+		<key>32CDCCA6013458FEA9337381</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3DF3F6CC5F140AD7139B4323</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5023A6546AE2E13B5D3C66A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51C4F6E56EAF2592AFB89BFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>614D23525B39D07FE1481E44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61C6DBD045746E7832DBF997</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C3D224DB2F4855441B9CC7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85CC2E933566A0F273DB6106</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AF73534C7D4B7FCA083E39B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA02E7102BB0C56ECC03C945</key>
 		<dict>
 			<key>primary</key>
 			<true/>

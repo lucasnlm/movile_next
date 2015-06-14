@@ -11,9 +11,7 @@ import UIKit
 class EpisodesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    var items: [String] = ["We", "Heart", "Swift"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -24,7 +22,7 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count;
+        return 10;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
