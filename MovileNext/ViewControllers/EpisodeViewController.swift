@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TraktModels
 
 class EpisodeViewController: UIViewController {
 
@@ -18,15 +19,34 @@ class EpisodeViewController: UIViewController {
     
     @IBOutlet weak var overviewText: UILabel!
     
+    var show : Show?
+    
+    var episode : Episode?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         episodeDescriptionView.textContainer.lineFragmentPadding = 0
         episodeDescriptionView.textContainerInset = UIEdgeInsetsZero
-
-        episodeNameView.text = "Episosio Piloto"
+        
+        loadEpisode()
     }
 
+    
+    func loadEpisode() {
+        self.navigationItem.title = show?.title
+        
+        episodeNameView.text = episode?.title
+        episodeDescriptionView.text = episode?.overview
+        
+        let placeHolder = UIImage(named: "bg")
+        if let url = episode?.screenshot?.mediumImageURL {
+            coverImageView.hnk_setImageFromURL(url, placeholder: placeHolder)
+        } else {
+            coverImageView.image = placeHolder
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

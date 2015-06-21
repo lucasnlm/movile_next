@@ -8,6 +8,7 @@ use_frameworks!
 target 'MovileNext', :exclusive => true do
     # Add Application pods here
     pod 'Alamofire'
+    pod 'HanekeSwift'
     pod 'Argo'
     pod 'Result'
     pod 'TraktModels', :git => 'http://github.com/marcelofabri/TraktModels.git'

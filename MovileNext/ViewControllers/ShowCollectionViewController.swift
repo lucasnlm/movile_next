@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TraktModels
 
 let reuseIdentifier = "Cell"
 
@@ -17,6 +18,10 @@ class ShowCollectionViewController: UIViewController,
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let trakt = TraktHTTPClient()
+    
+    var shows : [Show] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,22 +31,66 @@ class ShowCollectionViewController: UIViewController,
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        /*trakt.getShow("game-of-thrones") { result in
+            println(result.value)
+            self.shows.append(result.value!)
+            self.collectionView.reloadData()
+        }
+        
+        trakt.getShow("daredevil") { result in
+            println(result.value)
+            self.shows.append(result.value!)
+            self.collectionView.reloadData()
+        }*/
+        
+        /*trakt.getEpisode("game-of-thrones", season: 5, episode: 10) { result in
+            println(result.value?.overview)
+        }*/
+        
+        /*trakt.getEpisodes("game-of-thrones", season: 1) { result in
+            println(result.value)
+            println("Error \(result.error)")
+        }*/
+        
+        trakt.getPopularShows() { result in
+              let showResult = result.value!
+              for show in showResult {
+                self.shows.append(show)
+              }
+            
+            self.collectionView.reloadData()
+        }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue == Segue.season_to_episodes {
+            if let cell = sender as? UICollectionViewCell,
+                indexPath = collectionView.indexPathForCell(cell) {
+                    let vc = segue.destinationViewController as! EpisodesListViewController
+                    vc.show = shows[indexPath.row]
+            }
+        }
+    }
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
 
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 14
+        return shows.count
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let identifier = Reusable.ShowCell.identifier!
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! SerieCollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
-        cell.titleView?.text = "Nome de um seriado muito grande"
+        
+        let show = shows[indexPath.item]
+        cell.titleView?.text = show.title
+        cell.loadShow(show)
+        
         return cell
     }
 
