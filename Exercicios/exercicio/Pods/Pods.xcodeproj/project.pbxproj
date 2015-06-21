@@ -1,0 +1,923 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02DBD2BF75E1C3E98F0596CD /* Decoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8EB86E210052655859FA3 /* Decoded.swift */; };
+		0385F8E2E00092190EBD3161 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2B7F67F2EF732C8FD6FEA4 /* Decodable.swift */; };
+		0FC42C7526D8E3589A2D9B84 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA176F5D0F580692D2676ACB /* Runes.framework */; };
+		14F5DF9B34ABA64247ECA78A /* Pods-exercicio-Box-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8259C5FCC5B0A79A40F5FD /* Pods-exercicio-Box-dummy.m */; };
+		2B63013FAA44F0805AA71B44 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1167303D1706B664AFE18C /* Operators.swift */; };
+		2C2874886171653FBBDB962C /* MutableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CCA93C527B8A9AF6CB0D30 /* MutableBox.swift */; };
+		3236A188E32297A50E8CECD5 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C6745D3386B597F3C7199 /* JSON.swift */; };
+		34AD7C1B0EDC9E6CF9413C9D /* curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C4862A07AA9CC363FD3478 /* curry.swift */; };
+		3F0BB00C64D82351F624F832 /* StandardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615770C6181B8C8D2679694D /* StandardTypes.swift */; };
+		492987B9AC5BB35331EFA737 /* Pods-exercicio-Argo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129A6F7815709B43F9DDB7A /* Pods-exercicio-Argo-dummy.m */; };
+		4AA438C4CD02A89456152F8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FC25141CED11D486DE934C /* Foundation.framework */; };
+		4AA85234C7EC67D0D655B8FA /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2907D5E5BA45C0320B3013 /* Optional.swift */; };
+		4E74A6B8D82EFF766940427C /* BoxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2C9100269D37FC6F31DEE /* BoxType.swift */; };
+		4E7B622283748019DC925EE3 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9430ED177106DFB1EF007DF2 /* Dictionary.swift */; };
+		627DC81ADEADA266EA96697D /* Pods-exercicio-Runes-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E49900F6E312FE72118991 /* Pods-exercicio-Runes-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70E2D2B6183611312C218D0D /* Pods-exercicio-Box-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E2245DFEF1F2D69A5EACD5 /* Pods-exercicio-Box-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		710DE8FDE4F6256366EC153F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FC25141CED11D486DE934C /* Foundation.framework */; };
+		71FAD6791E5E12768D92123D /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE090655B3FCC07AF9E925 /* Operators.swift */; };
+		8B7BFB07A5C327981B0831CF /* flatReduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D55A5D8593D090FEAAE1660 /* flatReduce.swift */; };
+		94BE49F47EDD505E3344BC1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FC25141CED11D486DE934C /* Foundation.framework */; };
+		A0EAA5E94ACDD5120B37894D /* Runes.h in Headers */ = {isa = PBXBuildFile; fileRef = B2EFCCEFECA8D8E6E952FB40 /* Runes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9ABA8FCB669B2E3E9B32AFA /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DB7595DE8F1A0385DD2C4 /* Array.swift */; };
+		BA9A873CCEAB51AC9883C0EB /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313B143EA45922B0696E366F /* Box.framework */; };
+		D5EBBE9D7C6A1916BB29724B /* sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032650003B600F2D1C3866E9 /* sequence.swift */; };
+		D930EB812C7A2731F6A74268 /* Pods-exercicio-Runes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 590D876AB744176CF2E75A00 /* Pods-exercicio-Runes-dummy.m */; };
+		DAE4AD5F47678C93DEE5C263 /* Pods-exercicio-Argo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F3A3F74B2C5823552584E /* Pods-exercicio-Argo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4900AC1E0CC3BD93EF07CCD /* Box.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB61BD4924C68DEF6C2A084 /* Box.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA13B148EC21796BDD1A4080 /* Pods-exercicio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA67A3DD0961D8F21FAB911D /* Pods-exercicio-dummy.m */; };
+		EC991AE8BB352B161B7577B4 /* Pods-exercicio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A7836C2A53828C47E34B3FA /* Pods-exercicio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED0119C8769E311478B3F9D0 /* decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DB98D799D63B40401E1985 /* decode.swift */; };
+		EDF29FB714669D49E57703DB /* Argo.h in Headers */ = {isa = PBXBuildFile; fileRef = BC02BF2682047D542FB8C591 /* Argo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0D27DCBA7373C6EDA8E9FC6 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA3D6C673C42EC510D82B2 /* Box.swift */; };
+		F6AB70A9C99F01E852E8826E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FC25141CED11D486DE934C /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B42100A9B8D2811C3FFC067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3536C4F5FEEA37CA83DDB303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146683FCDFB90C161CA74979;
+			remoteInfo = "Pods-exercicio-Box";
+		};
+		A784E6D9925A0F6806574B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3536C4F5FEEA37CA83DDB303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADE477A2842033E2E3C787D;
+			remoteInfo = "Pods-exercicio-Runes";
+		};
+		BB923FE95C787A266E23541D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3536C4F5FEEA37CA83DDB303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CD624ECF9D36F423C7AE75E;
+			remoteInfo = "Pods-exercicio-Argo";
+		};
+		C0F57F1A4BCB3C135234458B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3536C4F5FEEA37CA83DDB303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146683FCDFB90C161CA74979;
+			remoteInfo = "Pods-exercicio-Box";
+		};
+		E92A155001597A42E1833DA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3536C4F5FEEA37CA83DDB303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADE477A2842033E2E3C787D;
+			remoteInfo = "Pods-exercicio-Runes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00C4862A07AA9CC363FD3478 /* curry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = curry.swift; path = Argo/Functions/curry.swift; sourceTree = "<group>"; };
+		032650003B600F2D1C3866E9 /* sequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = sequence.swift; path = Argo/Functions/sequence.swift; sourceTree = "<group>"; };
+		03DA3D6C673C42EC510D82B2 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Box/Box.swift; sourceTree = "<group>"; };
+		0D30BF916A4288B31359CDDE /* Pods-exercicio-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-environment.h"; sourceTree = "<group>"; };
+		0E8259C5FCC5B0A79A40F5FD /* Pods-exercicio-Box-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-exercicio-Box-dummy.m"; sourceTree = "<group>"; };
+		13F155B76242AEC807360365 /* Pods-exercicio-Box-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio-Box-Private.xcconfig"; sourceTree = "<group>"; };
+		142C6745D3386B597F3C7199 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Argo/Types/JSON.swift; sourceTree = "<group>"; };
+		16C12F14B2EEDC8AEC648191 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E2245DFEF1F2D69A5EACD5 /* Pods-exercicio-Box-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-Box-umbrella.h"; sourceTree = "<group>"; };
+		1B90ACE05B0B3F338E335D44 /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5F357E3E26855A5C4671A8 /* Pods-exercicio-Argo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio-Argo.xcconfig"; sourceTree = "<group>"; };
+		2129A6F7815709B43F9DDB7A /* Pods-exercicio-Argo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-exercicio-Argo-dummy.m"; sourceTree = "<group>"; };
+		29F038C2E4819DDD0D7AB911 /* Pods_exercicio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exercicio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3F75D91981E3D6F76B2A15 /* Pods-exercicio-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-exercicio-resources.sh"; sourceTree = "<group>"; };
+		313B143EA45922B0696E366F /* Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E26F8FCE3D3AF578428E88 /* Pods-exercicio-Argo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-exercicio-Argo.modulemap"; sourceTree = "<group>"; };
+		3C1D288C7628B9C0B1A51727 /* Pods-exercicio-Runes.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio-Runes.xcconfig"; sourceTree = "<group>"; };
+		3D55A5D8593D090FEAAE1660 /* flatReduce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = flatReduce.swift; path = Argo/Functions/flatReduce.swift; sourceTree = "<group>"; };
+		4D7F3A3F74B2C5823552584E /* Pods-exercicio-Argo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-Argo-umbrella.h"; sourceTree = "<group>"; };
+		54C5D8FAC4DFDD6936D84FB7 /* Pods-exercicio-Box.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-exercicio-Box.modulemap"; sourceTree = "<group>"; };
+		569402447CA3D43DAE038119 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590D876AB744176CF2E75A00 /* Pods-exercicio-Runes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-exercicio-Runes-dummy.m"; sourceTree = "<group>"; };
+		5C2907D5E5BA45C0320B3013 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = Source/Optional.swift; sourceTree = "<group>"; };
+		5CF5AAA625957EF175FB47F4 /* Pods-exercicio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-exercicio.modulemap"; sourceTree = "<group>"; };
+		5D2B7F67F2EF732C8FD6FEA4 /* Decodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decodable.swift; path = Argo/Types/Decodable.swift; sourceTree = "<group>"; };
+		5F3A7BC34138BBD5C2330133 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		615770C6181B8C8D2679694D /* StandardTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StandardTypes.swift; path = Argo/Types/StandardTypes.swift; sourceTree = "<group>"; };
+		669DB7595DE8F1A0385DD2C4 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Source/Array.swift; sourceTree = "<group>"; };
+		6A0ECCF486AA30A83E8EF6D0 /* Pods-exercicio-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-exercicio-acknowledgements.plist"; sourceTree = "<group>"; };
+		6C1167303D1706B664AFE18C /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Operators.swift; sourceTree = "<group>"; };
+		72E3DBDA6CBBD490DEA0026C /* Argo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Argo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7567AC10F7513E2D7DEBD138 /* Pods-exercicio-Runes-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-Runes-prefix.pch"; sourceTree = "<group>"; };
+		7A3B392C69077FD0FB9D7420 /* Pods-exercicio-Box-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-Box-prefix.pch"; sourceTree = "<group>"; };
+		7D0A74F2B8FE4487D4F8350A /* Pods-exercicio-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-exercicio-acknowledgements.markdown"; sourceTree = "<group>"; };
+		872E0371E1406A398DA8510A /* Box.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7836C2A53828C47E34B3FA /* Pods-exercicio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-umbrella.h"; sourceTree = "<group>"; };
+		93FC25141CED11D486DE934C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9430ED177106DFB1EF007DF2 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Argo/Extensions/Dictionary.swift; sourceTree = "<group>"; };
+		9E7DBA707D115DC1478CD817 /* Pods-exercicio-Box.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio-Box.xcconfig"; sourceTree = "<group>"; };
+		A0268E5692931DCC15E6E2FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62A2842321BBA5E1EF89859 /* Pods-exercicio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio.debug.xcconfig"; sourceTree = "<group>"; };
+		B0E8EB86E210052655859FA3 /* Decoded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decoded.swift; path = Argo/Types/Decoded.swift; sourceTree = "<group>"; };
+		B2EFCCEFECA8D8E6E952FB40 /* Runes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Runes.h; path = Source/Runes.h; sourceTree = "<group>"; };
+		B781726AA56EA9ACC0CC2C3A /* Pods-exercicio-Argo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-Argo-prefix.pch"; sourceTree = "<group>"; };
+		B9933139A208EAE1DEFA25B5 /* Pods-exercicio-Argo-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio-Argo-Private.xcconfig"; sourceTree = "<group>"; };
+		BC02BF2682047D542FB8C591 /* Argo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Argo.h; path = Argo/Resources/Argo.h; sourceTree = "<group>"; };
+		C37DA11C75EA573DFF15C74B /* Pods-exercicio-Runes.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-exercicio-Runes.modulemap"; sourceTree = "<group>"; };
+		C52A6EFBD30657D78E23BBDA /* Pods-exercicio-Runes-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio-Runes-Private.xcconfig"; sourceTree = "<group>"; };
+		CCCFEF8E1F80274180FE1E83 /* Pods-exercicio-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-exercicio-frameworks.sh"; sourceTree = "<group>"; };
+		D2DB98D799D63B40401E1985 /* decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = decode.swift; path = Argo/Functions/decode.swift; sourceTree = "<group>"; };
+		DA176F5D0F580692D2676ACB /* Runes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA67A3DD0961D8F21FAB911D /* Pods-exercicio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-exercicio-dummy.m"; sourceTree = "<group>"; };
+		DCB61BD4924C68DEF6C2A084 /* Box.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Box.h; path = Box/Box.h; sourceTree = "<group>"; };
+		E1806D90FCEFE34DAFCED136 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
+		E59F830FC2207FE5F44C06D8 /* Pods-exercicio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exercicio.release.xcconfig"; sourceTree = "<group>"; };
+		F1E49900F6E312FE72118991 /* Pods-exercicio-Runes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-exercicio-Runes-umbrella.h"; sourceTree = "<group>"; };
+		F8C2C9100269D37FC6F31DEE /* BoxType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoxType.swift; path = Box/BoxType.swift; sourceTree = "<group>"; };
+		F9CCA93C527B8A9AF6CB0D30 /* MutableBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MutableBox.swift; path = Box/MutableBox.swift; sourceTree = "<group>"; };
+		FEDE090655B3FCC07AF9E925 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Argo/Operators/Operators.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ACC2AE6AB8BEF8A89255F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9A873CCEAB51AC9883C0EB /* Box.framework in Frameworks */,
+				4AA438C4CD02A89456152F8D /* Foundation.framework in Frameworks */,
+				0FC42C7526D8E3589A2D9B84 /* Runes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		450EC51D6C129C89E63745A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94BE49F47EDD505E3344BC1A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6574F4DFE9EB99256505A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				710DE8FDE4F6256366EC153F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D4F46A5249585C05FA76EA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AB70A9C99F01E852E8826E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0905D81780A85DE361CA24E3 /* Box */ = {
+			isa = PBXGroup;
+			children = (
+				DCB61BD4924C68DEF6C2A084 /* Box.h */,
+				03DA3D6C673C42EC510D82B2 /* Box.swift */,
+				F8C2C9100269D37FC6F31DEE /* BoxType.swift */,
+				F9CCA93C527B8A9AF6CB0D30 /* MutableBox.swift */,
+				A53DC3C0CD1B6C38D6656AB1 /* Support Files */,
+			);
+			path = Box;
+			sourceTree = "<group>";
+		};
+		1EC2F7EBCEACAF7ED3E9B4AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				313B143EA45922B0696E366F /* Box.framework */,
+				DA176F5D0F580692D2676ACB /* Runes.framework */,
+				CF0610BB33AEC0A274767DC4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2688145700BDD6782B290730 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72E3DBDA6CBBD490DEA0026C /* Argo.framework */,
+				872E0371E1406A398DA8510A /* Box.framework */,
+				29F038C2E4819DDD0D7AB911 /* Pods_exercicio.framework */,
+				1B90ACE05B0B3F338E335D44 /* Runes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		478706751824BBDC1D8F1BAC = {
+			isa = PBXGroup;
+			children = (
+				E1806D90FCEFE34DAFCED136 /* Podfile */,
+				1EC2F7EBCEACAF7ED3E9B4AA /* Frameworks */,
+				C7AA3E4BC62FA4999B0BDF9F /* Pods */,
+				2688145700BDD6782B290730 /* Products */,
+				6EF3BFCB2C0B06831E1CBE13 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		6EF3BFCB2C0B06831E1CBE13 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB0EC0B2B7BB522F57996D66 /* Pods-exercicio */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		78119356ADA4172FBDB93594 /* Runes */ = {
+			isa = PBXGroup;
+			children = (
+				669DB7595DE8F1A0385DD2C4 /* Array.swift */,
+				6C1167303D1706B664AFE18C /* Operators.swift */,
+				5C2907D5E5BA45C0320B3013 /* Optional.swift */,
+				B2EFCCEFECA8D8E6E952FB40 /* Runes.h */,
+				D41A8ED9935AA3EB762FE517 /* Support Files */,
+			);
+			path = Runes;
+			sourceTree = "<group>";
+		};
+		A53DC3C0CD1B6C38D6656AB1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16C12F14B2EEDC8AEC648191 /* Info.plist */,
+				54C5D8FAC4DFDD6936D84FB7 /* Pods-exercicio-Box.modulemap */,
+				9E7DBA707D115DC1478CD817 /* Pods-exercicio-Box.xcconfig */,
+				13F155B76242AEC807360365 /* Pods-exercicio-Box-Private.xcconfig */,
+				0E8259C5FCC5B0A79A40F5FD /* Pods-exercicio-Box-dummy.m */,
+				7A3B392C69077FD0FB9D7420 /* Pods-exercicio-Box-prefix.pch */,
+				17E2245DFEF1F2D69A5EACD5 /* Pods-exercicio-Box-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-exercicio-Box";
+			sourceTree = "<group>";
+		};
+		C7AA3E4BC62FA4999B0BDF9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F469F0882515366EFC1D2B39 /* Argo */,
+				0905D81780A85DE361CA24E3 /* Box */,
+				78119356ADA4172FBDB93594 /* Runes */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF0610BB33AEC0A274767DC4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				93FC25141CED11D486DE934C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D41A8ED9935AA3EB762FE517 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				569402447CA3D43DAE038119 /* Info.plist */,
+				C37DA11C75EA573DFF15C74B /* Pods-exercicio-Runes.modulemap */,
+				3C1D288C7628B9C0B1A51727 /* Pods-exercicio-Runes.xcconfig */,
+				C52A6EFBD30657D78E23BBDA /* Pods-exercicio-Runes-Private.xcconfig */,
+				590D876AB744176CF2E75A00 /* Pods-exercicio-Runes-dummy.m */,
+				7567AC10F7513E2D7DEBD138 /* Pods-exercicio-Runes-prefix.pch */,
+				F1E49900F6E312FE72118991 /* Pods-exercicio-Runes-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-exercicio-Runes";
+			sourceTree = "<group>";
+		};
+		D5F8B4C8C3B8B4EF5517D736 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0268E5692931DCC15E6E2FF /* Info.plist */,
+				35E26F8FCE3D3AF578428E88 /* Pods-exercicio-Argo.modulemap */,
+				1E5F357E3E26855A5C4671A8 /* Pods-exercicio-Argo.xcconfig */,
+				B9933139A208EAE1DEFA25B5 /* Pods-exercicio-Argo-Private.xcconfig */,
+				2129A6F7815709B43F9DDB7A /* Pods-exercicio-Argo-dummy.m */,
+				B781726AA56EA9ACC0CC2C3A /* Pods-exercicio-Argo-prefix.pch */,
+				4D7F3A3F74B2C5823552584E /* Pods-exercicio-Argo-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-exercicio-Argo";
+			sourceTree = "<group>";
+		};
+		DB0EC0B2B7BB522F57996D66 /* Pods-exercicio */ = {
+			isa = PBXGroup;
+			children = (
+				5F3A7BC34138BBD5C2330133 /* Info.plist */,
+				5CF5AAA625957EF175FB47F4 /* Pods-exercicio.modulemap */,
+				7D0A74F2B8FE4487D4F8350A /* Pods-exercicio-acknowledgements.markdown */,
+				6A0ECCF486AA30A83E8EF6D0 /* Pods-exercicio-acknowledgements.plist */,
+				DA67A3DD0961D8F21FAB911D /* Pods-exercicio-dummy.m */,
+				0D30BF916A4288B31359CDDE /* Pods-exercicio-environment.h */,
+				CCCFEF8E1F80274180FE1E83 /* Pods-exercicio-frameworks.sh */,
+				2F3F75D91981E3D6F76B2A15 /* Pods-exercicio-resources.sh */,
+				8A7836C2A53828C47E34B3FA /* Pods-exercicio-umbrella.h */,
+				A62A2842321BBA5E1EF89859 /* Pods-exercicio.debug.xcconfig */,
+				E59F830FC2207FE5F44C06D8 /* Pods-exercicio.release.xcconfig */,
+			);
+			name = "Pods-exercicio";
+			path = "Target Support Files/Pods-exercicio";
+			sourceTree = "<group>";
+		};
+		F469F0882515366EFC1D2B39 /* Argo */ = {
+			isa = PBXGroup;
+			children = (
+				BC02BF2682047D542FB8C591 /* Argo.h */,
+				5D2B7F67F2EF732C8FD6FEA4 /* Decodable.swift */,
+				B0E8EB86E210052655859FA3 /* Decoded.swift */,
+				9430ED177106DFB1EF007DF2 /* Dictionary.swift */,
+				142C6745D3386B597F3C7199 /* JSON.swift */,
+				FEDE090655B3FCC07AF9E925 /* Operators.swift */,
+				615770C6181B8C8D2679694D /* StandardTypes.swift */,
+				00C4862A07AA9CC363FD3478 /* curry.swift */,
+				D2DB98D799D63B40401E1985 /* decode.swift */,
+				3D55A5D8593D090FEAAE1660 /* flatReduce.swift */,
+				032650003B600F2D1C3866E9 /* sequence.swift */,
+				D5F8B4C8C3B8B4EF5517D736 /* Support Files */,
+			);
+			path = Argo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4FFBCAA3F24B1C2C1ABC792E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC991AE8BB352B161B7577B4 /* Pods-exercicio-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5275C4E879B65DE2EF3D42AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627DC81ADEADA266EA96697D /* Pods-exercicio-Runes-umbrella.h in Headers */,
+				A0EAA5E94ACDD5120B37894D /* Runes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6192E86517E6044753E785 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF29FB714669D49E57703DB /* Argo.h in Headers */,
+				DAE4AD5F47678C93DEE5C263 /* Pods-exercicio-Argo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F572339302647F94ED888AE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4900AC1E0CC3BD93EF07CCD /* Box.h in Headers */,
+				70E2D2B6183611312C218D0D /* Pods-exercicio-Box-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		146683FCDFB90C161CA74979 /* Pods-exercicio-Box */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4507BD601962ED5455BFF885 /* Build configuration list for PBXNativeTarget "Pods-exercicio-Box" */;
+			buildPhases = (
+				D2850AA6AC8C2564C3A70F5E /* Sources */,
+				5D4F46A5249585C05FA76EA4 /* Frameworks */,
+				F572339302647F94ED888AE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-exercicio-Box";
+			productName = "Pods-exercicio-Box";
+			productReference = 872E0371E1406A398DA8510A /* Box.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2312D0D0CE051492783FEEF8 /* Pods-exercicio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFC6EABC676C90F6CECF6D9B /* Build configuration list for PBXNativeTarget "Pods-exercicio" */;
+			buildPhases = (
+				CB31AC20E40CD048EE214A11 /* Sources */,
+				450EC51D6C129C89E63745A8 /* Frameworks */,
+				4FFBCAA3F24B1C2C1ABC792E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E52D0BED4B2514FDEB03C7F0 /* PBXTargetDependency */,
+				FCEE38398E89AA17C9B22DD6 /* PBXTargetDependency */,
+				B94D2D089B4096291EB45B27 /* PBXTargetDependency */,
+			);
+			name = "Pods-exercicio";
+			productName = "Pods-exercicio";
+			productReference = 29F038C2E4819DDD0D7AB911 /* Pods_exercicio.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CD624ECF9D36F423C7AE75E /* Pods-exercicio-Argo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61BB64B6E35C70CDF047994 /* Build configuration list for PBXNativeTarget "Pods-exercicio-Argo" */;
+			buildPhases = (
+				FD9A4483C01B131A3C9563EB /* Sources */,
+				2ACC2AE6AB8BEF8A89255F24 /* Frameworks */,
+				BC6192E86517E6044753E785 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D4963EE77D1D5095FDC86F1 /* PBXTargetDependency */,
+				F10DD1D251B537C9C59E1AD2 /* PBXTargetDependency */,
+			);
+			name = "Pods-exercicio-Argo";
+			productName = "Pods-exercicio-Argo";
+			productReference = 72E3DBDA6CBBD490DEA0026C /* Argo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AADE477A2842033E2E3C787D /* Pods-exercicio-Runes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5568C1714EE2FB0178E4B32B /* Build configuration list for PBXNativeTarget "Pods-exercicio-Runes" */;
+			buildPhases = (
+				9BF50F8AED0804EC04A05B61 /* Sources */,
+				4C6574F4DFE9EB99256505A9 /* Frameworks */,
+				5275C4E879B65DE2EF3D42AF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-exercicio-Runes";
+			productName = "Pods-exercicio-Runes";
+			productReference = 1B90ACE05B0B3F338E335D44 /* Runes.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3536C4F5FEEA37CA83DDB303 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = EF875A6B7E604B8A3D0A5634 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 478706751824BBDC1D8F1BAC;
+			productRefGroup = 2688145700BDD6782B290730 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2312D0D0CE051492783FEEF8 /* Pods-exercicio */,
+				6CD624ECF9D36F423C7AE75E /* Pods-exercicio-Argo */,
+				146683FCDFB90C161CA74979 /* Pods-exercicio-Box */,
+				AADE477A2842033E2E3C787D /* Pods-exercicio-Runes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BF50F8AED0804EC04A05B61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9ABA8FCB669B2E3E9B32AFA /* Array.swift in Sources */,
+				2B63013FAA44F0805AA71B44 /* Operators.swift in Sources */,
+				4AA85234C7EC67D0D655B8FA /* Optional.swift in Sources */,
+				D930EB812C7A2731F6A74268 /* Pods-exercicio-Runes-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB31AC20E40CD048EE214A11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA13B148EC21796BDD1A4080 /* Pods-exercicio-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2850AA6AC8C2564C3A70F5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0D27DCBA7373C6EDA8E9FC6 /* Box.swift in Sources */,
+				4E74A6B8D82EFF766940427C /* BoxType.swift in Sources */,
+				2C2874886171653FBBDB962C /* MutableBox.swift in Sources */,
+				14F5DF9B34ABA64247ECA78A /* Pods-exercicio-Box-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9A4483C01B131A3C9563EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0385F8E2E00092190EBD3161 /* Decodable.swift in Sources */,
+				02DBD2BF75E1C3E98F0596CD /* Decoded.swift in Sources */,
+				4E7B622283748019DC925EE3 /* Dictionary.swift in Sources */,
+				3236A188E32297A50E8CECD5 /* JSON.swift in Sources */,
+				71FAD6791E5E12768D92123D /* Operators.swift in Sources */,
+				492987B9AC5BB35331EFA737 /* Pods-exercicio-Argo-dummy.m in Sources */,
+				3F0BB00C64D82351F624F832 /* StandardTypes.swift in Sources */,
+				34AD7C1B0EDC9E6CF9413C9D /* curry.swift in Sources */,
+				ED0119C8769E311478B3F9D0 /* decode.swift in Sources */,
+				8B7BFB07A5C327981B0831CF /* flatReduce.swift in Sources */,
+				D5EBBE9D7C6A1916BB29724B /* sequence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D4963EE77D1D5095FDC86F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-exercicio-Box";
+			target = 146683FCDFB90C161CA74979 /* Pods-exercicio-Box */;
+			targetProxy = C0F57F1A4BCB3C135234458B /* PBXContainerItemProxy */;
+		};
+		B94D2D089B4096291EB45B27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-exercicio-Runes";
+			target = AADE477A2842033E2E3C787D /* Pods-exercicio-Runes */;
+			targetProxy = E92A155001597A42E1833DA8 /* PBXContainerItemProxy */;
+		};
+		E52D0BED4B2514FDEB03C7F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-exercicio-Argo";
+			target = 6CD624ECF9D36F423C7AE75E /* Pods-exercicio-Argo */;
+			targetProxy = BB923FE95C787A266E23541D /* PBXContainerItemProxy */;
+		};
+		F10DD1D251B537C9C59E1AD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-exercicio-Runes";
+			target = AADE477A2842033E2E3C787D /* Pods-exercicio-Runes */;
+			targetProxy = A784E6D9925A0F6806574B46 /* PBXContainerItemProxy */;
+		};
+		FCEE38398E89AA17C9B22DD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-exercicio-Box";
+			target = 146683FCDFB90C161CA74979 /* Pods-exercicio-Box */;
+			targetProxy = 1B42100A9B8D2811C3FFC067 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0DBCD507A64BF15E9B1FEB39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F155B76242AEC807360365 /* Pods-exercicio-Box-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-exercicio-Box/Pods-exercicio-Box-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio-Box/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio-Box/Pods-exercicio-Box.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Box;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		188DCF42F5C4478A2F6827BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52A6EFBD30657D78E23BBDA /* Pods-exercicio-Runes-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-exercicio-Runes/Pods-exercicio-Runes-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio-Runes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio-Runes/Pods-exercicio-Runes.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Runes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57A1434DAABD3B7E45D05709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59F830FC2207FE5F44C06D8 /* Pods-exercicio.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio/Pods-exercicio.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_exercicio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E1205BAA97E104DDE630A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9933139A208EAE1DEFA25B5 /* Pods-exercicio-Argo-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-exercicio-Argo/Pods-exercicio-Argo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio-Argo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio-Argo/Pods-exercicio-Argo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Argo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F6A68E97921E6BB4DB645B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5444F6378F4F8944FE36EAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52A6EFBD30657D78E23BBDA /* Pods-exercicio-Runes-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-exercicio-Runes/Pods-exercicio-Runes-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio-Runes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio-Runes/Pods-exercicio-Runes.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Runes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEEA2DDA16A4693DCC144BF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A62A2842321BBA5E1EF89859 /* Pods-exercicio.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio/Pods-exercicio.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_exercicio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5AC07FBC7E40394A200ADD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9933139A208EAE1DEFA25B5 /* Pods-exercicio-Argo-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-exercicio-Argo/Pods-exercicio-Argo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio-Argo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio-Argo/Pods-exercicio-Argo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Argo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE5BD42DADDEF125E1C06DA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F7883D3C6126C162EDA1881E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F155B76242AEC807360365 /* Pods-exercicio-Box-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-exercicio-Box/Pods-exercicio-Box-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-exercicio-Box/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-exercicio-Box/Pods-exercicio-Box.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Box;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4507BD601962ED5455BFF885 /* Build configuration list for PBXNativeTarget "Pods-exercicio-Box" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7883D3C6126C162EDA1881E /* Debug */,
+				0DBCD507A64BF15E9B1FEB39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5568C1714EE2FB0178E4B32B /* Build configuration list for PBXNativeTarget "Pods-exercicio-Runes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188DCF42F5C4478A2F6827BF /* Debug */,
+				A5444F6378F4F8944FE36EAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFC6EABC676C90F6CECF6D9B /* Build configuration list for PBXNativeTarget "Pods-exercicio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEA2DDA16A4693DCC144BF2 /* Debug */,
+				57A1434DAABD3B7E45D05709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF875A6B7E604B8A3D0A5634 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5BD42DADDEF125E1C06DA0 /* Debug */,
+				8F6A68E97921E6BB4DB645B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F61BB64B6E35C70CDF047994 /* Build configuration list for PBXNativeTarget "Pods-exercicio-Argo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1205BAA97E104DDE630A6A /* Debug */,
+				C5AC07FBC7E40394A200ADD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3536C4F5FEEA37CA83DDB303 /* Project object */;
+}
