@@ -8,9 +8,13 @@ use_frameworks!
 target 'MovileNext', :exclusive => true do
     # Add Application pods here
     pod 'Alamofire'
-    pod 'HanekeSwift'
+    pod 'Kingfisher', '~> 1.4'
     pod 'Argo'
     pod 'Result'
+    pod 'TagListView'
+    pod 'FloatRatingView', :git => 'https://github.com/strekfus/FloatRatingView.git'
+    pod 'BorderedView'
+    pod 'OverlayView', :git => 'https://github.com/marcelofabri/OverlayView.git'
     pod 'TraktModels', :git => 'http://github.com/marcelofabri/TraktModels.git'
 end
 

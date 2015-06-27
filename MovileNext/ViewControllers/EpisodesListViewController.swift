@@ -15,7 +15,7 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
     
     let trakt = TraktHTTPClient()
     
-    var currentSeason = 1;
+    var season : Season?
     
     var show : Show?
     
@@ -24,7 +24,7 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        self.navigationItem.title = "Season \(currentSeason)"
+        self.navigationItem.title = "Season \(season!.number)"
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -60,7 +60,7 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! UITableViewCell
         
         let row = indexPath.row
-        cell.textLabel?.text = String(format: "S%02dE%02d", currentSeason, indexPath.row + 1)
+        cell.textLabel?.text = String(format: "S%02dE%02d", season!.number, indexPath.row + 1)
         cell.detailTextLabel?.text = episodes[row].title
         
         return cell

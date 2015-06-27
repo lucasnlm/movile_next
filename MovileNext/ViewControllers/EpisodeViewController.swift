@@ -8,6 +8,21 @@
 
 import UIKit
 import TraktModels
+import Kingfisher
+
+extension UIImage {
+    func darkenImage() -> UIImage {
+        let context = CIContext()
+        let input = CoreImage.CIImage(image: self) // https://twitter.com/gernot/status/508169187379146752
+        
+        let filter = CIFilter(name: "CIExposureAdjust")
+        filter.setValue(input, forKey: "inputImage")
+        filter.setValue(-2, forKey: "inputEV")
+        
+        let output = UIImage(CIImage: filter.outputImage)
+        return output!
+    }
+}
 
 class EpisodeViewController: UIViewController {
 
@@ -39,9 +54,16 @@ class EpisodeViewController: UIViewController {
         episodeNameView.text = episode?.title
         episodeDescriptionView.text = episode?.overview
         
-        let placeHolder = UIImage(named: "bg")
+        let placeHolder = UIImage(named: "bg")?.darkenImage()
         if let url = episode?.screenshot?.mediumImageURL {
-            coverImageView.hnk_setImageFromURL(url, placeholder: placeHolder)
+            coverImageView.kf_setImageWithURL(url,
+                placeholderImage: placeHolder,
+                optionsInfo: nil,
+                progressBlock: nil,
+                completionHandler: { (image, error, cacheType, imageURL) -> () in
+                    image?.darkenImage()
+                }
+            )
         } else {
             coverImageView.image = placeHolder
         }

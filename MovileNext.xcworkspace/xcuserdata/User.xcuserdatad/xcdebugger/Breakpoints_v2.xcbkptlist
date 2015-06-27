@@ -65,5 +65,83 @@
             endingLineNumber = "11">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovileNext/ViewControllers/ShowInfoController.swift"
+            timestampString = "457131108.72405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
+                  moduleName = "MovileNext"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
+                  timestampString = "457128317.679188"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "622">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
+                  moduleName = "MovileNext"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
+                  timestampString = "457128317.679706"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "645">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
+                  moduleName = "MovileNext"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
+                  timestampString = "457128317.680147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "630">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
+                  moduleName = "MovileNext"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
+                  timestampString = "457128317.680521"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "653">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

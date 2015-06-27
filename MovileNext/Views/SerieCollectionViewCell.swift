@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Haneke
+import Kingfisher
 import TraktModels
 
 class SerieCollectionViewCell: UICollectionViewCell {
@@ -16,10 +16,18 @@ class SerieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var coverView: UIImageView!
     
+    var task : RetrieveImageTask?;
+    
     func loadShow(show: Show) {
         let placeHolder = UIImage(named: "poster")
         if let url = show.poster?.fullImageURL {
-            coverView.hnk_setImageFromURL(url, placeholder: placeHolder)
+            task = coverView.kf_setImageWithURL(url,
+                placeholderImage: placeHolder,
+                optionsInfo: nil,
+                progressBlock: nil,
+                completionHandler: { (image, error, cacheType, imageURL) -> () in
+                }
+            )
         } else {
             coverView.image = placeHolder
         }
@@ -30,7 +38,7 @@ class SerieCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        coverView.hnk_cancelSetImage()
+        task?.cancel()
         coverView.image = nil
     }
 }

@@ -64,10 +64,10 @@ class ShowCollectionViewController: UIViewController,
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue == Segue.season_to_episodes {
+        if segue == Segue.shows_to_details {
             if let cell = sender as? UICollectionViewCell,
                 indexPath = collectionView.indexPathForCell(cell) {
-                    let vc = segue.destinationViewController as! EpisodesListViewController
+                    let vc = segue.destinationViewController as! ShowDetailsController
                     vc.show = shows[indexPath.row]
             }
         }
