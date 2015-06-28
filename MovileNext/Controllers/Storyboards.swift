@@ -239,13 +239,13 @@ extension ShowDetailsController {
         var kind: SegueKind? {
             switch (self) {
             case details_to_overview:
-                return SegueKind(rawValue: "show")
+                return SegueKind(rawValue: "embed")
             case details_to_seasons:
-                return SegueKind(rawValue: "show")
+                return SegueKind(rawValue: "embed")
             case details_to_genres:
-                return SegueKind(rawValue: "show")
+                return SegueKind(rawValue: "embed")
             case details_to_info:
-                return SegueKind(rawValue: "show")
+                return SegueKind(rawValue: "embed")
             default:
                 preconditionFailure("Invalid value")
                 break
@@ -289,11 +289,11 @@ extension UIStoryboardSegue {
 extension ShowSeasonsController { 
 
     enum Segue: String, Printable, SegueProtocol {
-        case season_to_episodes = "season_to_episodes"
+        case seasons_to_episodes = "seasons_to_episodes"
 
         var kind: SegueKind? {
             switch (self) {
-            case season_to_episodes:
+            case seasons_to_episodes:
                 return SegueKind(rawValue: "show")
             default:
                 preconditionFailure("Invalid value")
@@ -303,7 +303,7 @@ extension ShowSeasonsController {
 
         var destination: UIViewController.Type? {
             switch (self) {
-            case season_to_episodes:
+            case seasons_to_episodes:
                 return EpisodesListViewController.self
             default:
                 assertionFailure("Unknown destination")
@@ -395,11 +395,14 @@ extension ShowCollectionViewController {
 
     enum Reusable: String, Printable, ReusableProtocol {
         case ShowCell = "ShowCell"
+        case showCollection = "showCollection"
 
         var kind: ReusableKind? {
             switch (self) {
             case ShowCell:
                 return ReusableKind(rawValue: "collectionViewCell")
+            case showCollection:
+                return ReusableKind(rawValue: "collectionReusableView")
             default:
                 preconditionFailure("Invalid value")
                 break

@@ -76,7 +76,6 @@ class TraktHTTPClient {
                     let decoded = T.decode(JSON.parse(element))
 
                     if let value = decoded.value {
-                        println(value)
                         elements.append(value)
                     }
                 }
@@ -109,7 +108,7 @@ private enum Router : URLRequestConvertible {
                 case .Episode(let id, let season, let episode):
                     return ("shows/\(id)/seasons/\(season)/episodes/\(episode)", ["extended": "images,full"], .GET)
                 case .PopularShows():
-                    return ("shows/popular", ["extended": "images,full", "limit" : "30"], .GET)
+                    return ("shows/popular", ["extended": "images", "limit" : "30"], .GET)
                 case .Episodes(let id, let season):
                     return ("shows/\(id)/seasons/\(season)", ["extended": "images,full"], .GET)
                 case .Seasons(let id):

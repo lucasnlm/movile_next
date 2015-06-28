@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovileNext/ViewControllers/EpisodesListViewController.swift"
-            timestampString = "456611956.927839"
+            timestampString = "457211615.918185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -71,76 +71,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovileNext/ViewControllers/ShowInfoController.swift"
-            timestampString = "457131108.72405"
+            filePath = "MovileNext/Protocols/ShowInternalViewController.swift"
+            timestampString = "457199078.805827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
-                  moduleName = "MovileNext"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
-                  timestampString = "457128317.679188"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "622">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
-                  moduleName = "MovileNext"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
-                  timestampString = "457128317.679706"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "645">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "@objc MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
-                  moduleName = "MovileNext"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
-                  timestampString = "457128317.680147"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "630">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "@objc MovileNext.ShowInfoController.viewDidLoad (MovileNext.ShowInfoController)() -&gt; ()"
-                  moduleName = "MovileNext"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/User/Next/MovileNext/MovileNext/ViewControllers/ShowInfoController.swift"
-                  timestampString = "457128317.680521"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "653">
-               </Location>
-            </Locations>
+            startingLineNumber = "12"
+            endingLineNumber = "12">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

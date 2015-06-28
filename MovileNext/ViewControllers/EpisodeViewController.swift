@@ -13,7 +13,7 @@ import Kingfisher
 extension UIImage {
     func darkenImage() -> UIImage {
         let context = CIContext()
-        let input = CoreImage.CIImage(image: self) // https://twitter.com/gernot/status/508169187379146752
+        let input = CoreImage.CIImage(image: self)
         
         let filter = CIFilter(name: "CIExposureAdjust")
         filter.setValue(input, forKey: "inputImage")
@@ -75,10 +75,14 @@ class EpisodeViewController: UIViewController {
     }
     
     @IBAction func sharedPressed(sender: UIBarButtonItem) {
-        let url = NSURL(string: "www.google.com")!
-        let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        if let imdb = show?.identifiers.imdb {
+            let serieImdb = "http://www.imdb.com/title/\(imdb)/"
         
-         presentViewController(vc, animated: true, completion: nil)
+            let url = NSURL(string: serieImdb)!
+            let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        
+            presentViewController(vc, animated: true, completion: nil)
+        }
     }
     
     /*

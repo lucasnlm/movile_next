@@ -31,28 +31,7 @@ class ShowCollectionViewController: UIViewController,
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        /*trakt.getShow("game-of-thrones") { result in
-            println(result.value)
-            self.shows.append(result.value!)
-            self.collectionView.reloadData()
-        }
-        
-        trakt.getShow("daredevil") { result in
-            println(result.value)
-            self.shows.append(result.value!)
-            self.collectionView.reloadData()
-        }*/
-        
-        /*trakt.getEpisode("game-of-thrones", season: 5, episode: 10) { result in
-            println(result.value?.overview)
-        }*/
-        
-        /*trakt.getEpisodes("game-of-thrones", season: 1) { result in
-            println(result.value)
-            println("Error \(result.error)")
-        }*/
-        
+       
         trakt.getPopularShows() { result in
               let showResult = result.value!
               for show in showResult {

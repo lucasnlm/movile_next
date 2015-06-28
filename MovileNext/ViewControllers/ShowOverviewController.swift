@@ -10,24 +10,23 @@ import Foundation
 import TraktModels
 import UIKit
 
-class ShowOverviewController : UIViewController {    
-    var show : Show?
-    
-    let trakt = TraktHTTPClient()
-    
+class ShowOverviewController : UIViewController, ShowInternalViewController {
     @IBOutlet weak var showTitle: UILabel!
     
     @IBOutlet weak var showOverview: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func loadShow(show: Show?) {
+        showOverview.text = show?.overview 
+    }
+    
+    func intrinsicContentSize() -> CGSize {
+        let labelSize = 30.0 as CGFloat
+        let contentSize = showOverview.contentSize.height
         
-        showTitle.text = show?.title
-
-        if let slug = show?.identifiers.slug {
-            trakt.getShow(slug) { result in
-                self.showOverview.text = result.value?.overview
-            }
-        }
+        return CGSize(width: 0, height: (labelSize + contentSize))
     }
 }

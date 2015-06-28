@@ -10,8 +10,13 @@ import Foundation
 import UIKit
 import TraktModels
 
-class ShowSeasonsController : UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var seasons : [Season]?
+protocol SeasonsTableViewControllerDelegate : class {
+    func seasonsController(vc: ShowSeasonsController, didSelectSeason season: Season)
+}
+
+class ShowSeasonsController : UIViewController, UITableViewDelegate, UITableViewDataSource,
+ShowInternalViewController {
+    var seasons : [Season]? = [Season]()
     
     var show : Show?
     
@@ -27,13 +32,20 @@ class ShowSeasonsController : UIViewController, UITableViewDelegate, UITableView
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue == Segue.season_to_episodes {
+        /*if segue == Segue.season_to_episodes {
             if let cell = sender as? SeasonTableViewCell,
                 indexPath = tableview.indexPathForCell(cell) {
                     let vc = segue.destinationViewController as! EpisodesListViewController
                     vc.show = show
                     vc.season = seasons?[indexPath.row]
             }
+        }*/
+    }
+    
+    func loadSeasons(seasons: [Season]) {
+        if isViewLoaded() {
+            self.seasons = seasons
+            tableview.reloadData()
         }
     }
     
@@ -52,6 +64,11 @@ class ShowSeasonsController : UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        tableview.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
+    func intrinsicContentSize() -> CGSize {
+        let contentSize = tableview.contentSize.height + 30.0
+        return CGSize(width: 0, height: contentSize)
     }
 }

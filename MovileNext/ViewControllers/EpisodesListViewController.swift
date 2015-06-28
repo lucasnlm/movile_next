@@ -9,7 +9,7 @@
 import UIKit
 import TraktModels
 
-class EpisodesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class EpisodesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SeasonsTableViewControllerDelegate  {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,13 +24,19 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        self.navigationItem.title = "Season \(season!.number)"
+        let seasonNumber = season!.number
+        
+        if seasonNumber != 0 {
+            self.navigationItem.title = "Season \(seasonNumber)"
+        } else {
+            self.navigationItem.title = "Specials"
+        }
 
         tableView.delegate = self
         tableView.dataSource = self
         
         if let slug = show?.identifiers.slug {
-            trakt.getEpisodes(slug, season: 1) { result in
+            trakt.getEpisodes(slug, season: seasonNumber) { result in
                 if let value = result.value {
                     self.episodes = value
                 }
@@ -38,6 +44,10 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func seasonsController(vc: ShowSeasonsController, didSelectSeason season: Season) {
+        self.season = season
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -67,6 +77,6 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+
     }
 }

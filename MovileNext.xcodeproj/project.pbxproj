@@ -15,6 +15,8 @@
 		CE0FF55A1B2CAE2D00C18F84 /* UIColor+MovileNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FF5591B2CAE2D00C18F84 /* UIColor+MovileNext.swift */; };
 		CE0FF55C1B2CB00400C18F84 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FF55B1B2CB00400C18F84 /* CustomNavigationController.swift */; };
 		CE0FF55E1B2CB12700C18F84 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FF55D1B2CB12700C18F84 /* EpisodeViewController.swift */; };
+		CE427A251B404DB400D87608 /* ShowInternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE427A241B404DB400D87608 /* ShowInternalViewController.swift */; };
+		CE427A271B408E7200D87608 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE427A261B408E7200D87608 /* FavoritesManager.swift */; };
 		CE45871F1B3EE634009F5187 /* ShowOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45871E1B3EE634009F5187 /* ShowOverviewController.swift */; };
 		CE4587211B3EEACE009F5187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4587201B3EEACE009F5187 /* Main.storyboard */; };
 		CE4587231B3EED42009F5187 /* ShowDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4587221B3EED42009F5187 /* ShowDetailsController.swift */; };
@@ -54,6 +56,8 @@
 		CE0FF5591B2CAE2D00C18F84 /* UIColor+MovileNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+MovileNext.swift"; path = "../../../movile-up/src/UIColor+MovileNext.swift"; sourceTree = "<group>"; };
 		CE0FF55B1B2CB00400C18F84 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CE0FF55D1B2CB12700C18F84 /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		CE427A241B404DB400D87608 /* ShowInternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInternalViewController.swift; sourceTree = "<group>"; };
+		CE427A261B408E7200D87608 /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		CE45871E1B3EE634009F5187 /* ShowOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOverviewController.swift; sourceTree = "<group>"; };
 		CE4587201B3EEACE009F5187 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE4587221B3EED42009F5187 /* ShowDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailsController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				BA8B272006A0C80B711DE464 /* AppDelegate.swift */,
 				DDD98453BF790A4B9184E36E /* Storyboards.swift */,
 				CE9136E81B2E1AE000BDE676 /* TraktHTTPClient.swift */,
+				CE427A261B408E7200D87608 /* FavoritesManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 		DEB2E5B0C77B1C44CB645357 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				CE427A241B404DB400D87608 /* ShowInternalViewController.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				CE0FF55C1B2CB00400C18F84 /* CustomNavigationController.swift in Sources */,
 				CE4587271B3EF8EA009F5187 /* SeasonTableViewCell.swift in Sources */,
 				CE9136E51B2DD54D00BDE676 /* ShowCollectionViewController.swift in Sources */,
+				CE427A271B408E7200D87608 /* FavoritesManager.swift in Sources */,
 				CE0FF55E1B2CB12700C18F84 /* EpisodeViewController.swift in Sources */,
 				CE45871F1B3EE634009F5187 /* ShowOverviewController.swift in Sources */,
 				6DD31B72EE7556359B02615A /* AppDelegate.swift in Sources */,
@@ -506,6 +513,7 @@
 				CE9136E71B2DD99200BDE676 /* SerieCollectionViewCell.swift in Sources */,
 				CE4587251B3EF1D6009F5187 /* ShowSeasonsController.swift in Sources */,
 				CE9136E11B2DC0CB00BDE676 /* EpisodesListViewController.swift in Sources */,
+				CE427A251B404DB400D87608 /* ShowInternalViewController.swift in Sources */,
 				CE4587231B3EED42009F5187 /* ShowDetailsController.swift in Sources */,
 				CE0FF55A1B2CAE2D00C18F84 /* UIColor+MovileNext.swift in Sources */,
 				BAAF7D53BECD391D2C30FD79 /* LaunchScreen.xib in Sources */,

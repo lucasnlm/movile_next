@@ -11,20 +11,23 @@ import TraktModels
 import UIKit
 import TagListView
 
-class ShowGenresController : UIViewController {
-    var show : Show?
-    
+class ShowGenresController : UIViewController, ShowInternalViewController {
     @IBOutlet weak var tagListView: TagListView!
-    
-    let trakt = TraktHTTPClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    func addGenresOf(show: Show?) {
         if let genres = show?.genres {
             for genre in genres {
                 tagListView.addTag(genre)
             }
         }
+    }
+    
+    func intrinsicContentSize() -> CGSize {
+        let contentSize = tagListView.intrinsicContentSize().height + 70.0
+        return CGSize(width: 0, height: contentSize)
     }
 }

@@ -39,7 +39,11 @@ class SeasonTableViewCell: UITableViewCell {
             seasonCover.image = placeHolder
         }
         
-        seasonTitle.text = "Season \(season.number)"
+        if(season.number == 0) {
+            seasonTitle.text = "Specials"
+        } else {
+            seasonTitle.text = "Season \(season.number)"
+        }
         
         if season.airedEpisodes == 0 {
             seasonEpisodes.text = "no episodes"
@@ -50,8 +54,16 @@ class SeasonTableViewCell: UITableViewCell {
             seasonEpisodes.text = "\(season.airedEpisodes!) episodes"
         }
         
+        var formatter = NSNumberFormatter()
+        formatter.decimalSeparator = ","
+        formatter.maximumFractionDigits = 1
+        formatter.maximumIntegerDigits = 2
+        
         floatRatingView.rating = season.rating!
-        ratingTextView.text = "\(season.rating!)"
+        
+        if let formatedNumber = formatter.stringFromNumber(season.rating!) {
+            ratingTextView.text = "\(formatedNumber)"
+        }
     }
     
     override func prepareForReuse() {
