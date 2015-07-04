@@ -19,7 +19,7 @@ class SerieCollectionViewCell: UICollectionViewCell {
     var task : RetrieveImageTask?;
     
     func loadShow(show: Show) {
-        let placeHolder = UIImage(named: "poster")
+        let placeHolder = UIImage(named: "poster-mini")
         if let url = show.poster?.fullImageURL {
             task = coverView.kf_setImageWithURL(url,
                 placeholderImage: placeHolder,
@@ -31,6 +31,9 @@ class SerieCollectionViewCell: UICollectionViewCell {
         } else {
             coverView.image = placeHolder
         }
+        
+        coverView.layer.cornerRadius = 3.0
+        coverView.clipsToBounds = true
         
         titleView.text = show.title
     }

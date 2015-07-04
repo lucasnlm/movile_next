@@ -12,7 +12,7 @@ import TraktModels
 import Kingfisher
 import FloatRatingView
 
-class ShowDetailsController : UIViewController {
+class ShowDetailsController : UIViewController, SeasonsTableViewControllerDelegate {
     var show : Show?
     
     private weak var overviewViewController : ShowOverviewController!
@@ -45,7 +45,9 @@ class ShowDetailsController : UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     
-    var task : RetrieveImageTask?;
+    var task : RetrieveImageTask?
+    
+    private var selectedSeason: Season!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,10 @@ class ShowDetailsController : UIViewController {
                         self.infoViewController.loadShow(self.show, seasons: value)
                     }
                 }
+                
+                if let showId = self.show?.identifiers.trakt {
+                    self.favoriteButton.selected = FavoritesManager.isFavorite(showId)
+                }
             }
         }
         
@@ -91,12 +97,16 @@ class ShowDetailsController : UIViewController {
     
     @IBAction func favoritePressed(sender: UIButton) {
         sender.selected = !sender.selected
-        
-        if sender.selected {
-            FavoritesManager.addFavorite(show?.identifiers.trakt)
-        }
-        else {
-            FavoritesManager.removeFavorite(show?.identifiers.trakt)
+
+        if let showId = show?.identifiers.trakt {
+            if sender.selected {
+                FavoritesManager.addFavorite(showId)
+            }
+            else {
+                FavoritesManager.removeFavorite(showId)
+            }
+            
+            NSNotificationCenter.defaultCenter().postNotificationName(notKey, object: self)
         }
     }
     
@@ -105,6 +115,7 @@ class ShowDetailsController : UIViewController {
             seasonViewController = segue.destinationViewController as! ShowSeasonsController
             seasonViewController.seasons = seasons
             seasonViewController.show = show
+            seasonViewController.delegate = self
         }
         
         if segue == Segue.details_to_overview {
@@ -118,6 +129,12 @@ class ShowDetailsController : UIViewController {
         if segue == Segue.details_to_info {
             infoViewController = segue.destinationViewController as! ShowInfoController
         }
+        
+        if segue == Segue.details_to_episodes {
+            let vc = segue.destinationViewController as! EpisodesListViewController
+            vc.season = selectedSeason
+            vc.show = show
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -126,5 +143,10 @@ class ShowDetailsController : UIViewController {
         overviewConstraint.constant = overviewViewController.intrinsicContentSize().height
         seasonsConstraint.constant = seasonViewController.intrinsicContentSize().height
         genresConstraint.constant = genresViewController.intrinsicContentSize().height
+    }
+    
+    func seasonsController(vc: ShowSeasonsController, didSelectSeason season: Season) {
+        selectedSeason = season
+        performSegue(Segue.details_to_episodes, sender: vc)
     }
 }

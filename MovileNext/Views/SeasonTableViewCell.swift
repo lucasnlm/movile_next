@@ -26,7 +26,7 @@ class SeasonTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingTextView: UILabel!
     
     func loadSeason(season: Season) {
-        let placeHolder = UIImage(named: "poster")
+        let placeHolder = UIImage(named: "poster-mini")
         if let url = season.poster?.fullImageURL {
             task = seasonCover.kf_setImageWithURL(url,
                 placeholderImage: placeHolder,

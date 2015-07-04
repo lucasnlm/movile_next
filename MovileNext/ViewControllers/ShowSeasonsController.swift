@@ -22,6 +22,8 @@ ShowInternalViewController {
     
     let trakt = TraktHTTPClient()
     
+    weak var delegate: SeasonsTableViewControllerDelegate?
+    
     @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
@@ -31,26 +33,15 @@ ShowInternalViewController {
         tableview.dataSource = self
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        /*if segue == Segue.season_to_episodes {
-            if let cell = sender as? SeasonTableViewCell,
-                indexPath = tableview.indexPathForCell(cell) {
-                    let vc = segue.destinationViewController as! EpisodesListViewController
-                    vc.show = show
-                    vc.season = seasons?[indexPath.row]
-            }
-        }*/
-    }
-    
     func loadSeasons(seasons: [Season]) {
         if isViewLoaded() {
             self.seasons = seasons
             tableview.reloadData()
         }
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return seasons!.count;
+        return seasons?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,17 +49,22 @@ ShowInternalViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! SeasonTableViewCell
     
         let row = indexPath.row
-        cell.loadSeason(seasons![row])
+        if let season = seasons?[row] {
+            cell.loadSeason(season)
+        }
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableview.deselectRowAtIndexPath(indexPath, animated: false)
+        if let season = seasons?[indexPath.row] {
+            delegate?.seasonsController(self, didSelectSeason: season)
+        }
     }
     
     func intrinsicContentSize() -> CGSize {
-        let contentSize = tableview.contentSize.height + 30.0
+        let contentSize = tableview.contentSize.height + 40.0
         return CGSize(width: 0, height: contentSize)
     }
 }

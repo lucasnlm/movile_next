@@ -25,7 +25,7 @@ class ShowOverviewController : UIViewController, ShowInternalViewController {
     
     func intrinsicContentSize() -> CGSize {
         let labelSize = 30.0 as CGFloat
-        let contentSize = showOverview.contentSize.height
+        let contentSize = showOverview.intrinsicContentSize().height
         
         return CGSize(width: 0, height: (labelSize + contentSize))
     }

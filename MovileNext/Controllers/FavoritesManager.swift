@@ -11,16 +11,16 @@ import Foundation
 class FavoritesManager {
     static var favorites : Set<Int> {
         get {
-            var returnValue : Set<Int>? = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? Set<Int>
+            var returnValue : [Int]? = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? [Int]
             if returnValue == nil {
-                returnValue = Set<Int>()
+                returnValue = Array<Int>()
             }
             
-            return returnValue!
+            return Set(returnValue!)
         }
         
         set (value) {
-            NSUserDefaults.standardUserDefaults().setObject(value, forKey: "favorites")
+            NSUserDefaults.standardUserDefaults().setObject(Array(value), forKey: "favorites")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
@@ -31,5 +31,9 @@ class FavoritesManager {
     
     static func removeFavorite(identifier: Int) {
         favorites.remove(identifier)
+    }
+    
+    static func isFavorite(indentifier: Int) -> Bool {
+        return favorites.contains(indentifier)
     }
 }

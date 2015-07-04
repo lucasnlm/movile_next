@@ -235,6 +235,7 @@ extension ShowDetailsController {
         case details_to_seasons = "details_to_seasons"
         case details_to_genres = "details_to_genres"
         case details_to_info = "details_to_info"
+        case details_to_episodes = "details_to_episodes"
 
         var kind: SegueKind? {
             switch (self) {
@@ -246,6 +247,8 @@ extension ShowDetailsController {
                 return SegueKind(rawValue: "embed")
             case details_to_info:
                 return SegueKind(rawValue: "embed")
+            case details_to_episodes:
+                return SegueKind(rawValue: "show")
             default:
                 preconditionFailure("Invalid value")
                 break
@@ -262,6 +265,8 @@ extension ShowDetailsController {
                 return ShowGenresController.self
             case details_to_info:
                 return ShowInfoController.self
+            case details_to_episodes:
+                return EpisodesListViewController.self
             default:
                 assertionFailure("Unknown destination")
                 return nil
@@ -277,45 +282,6 @@ extension ShowDetailsController {
 //MARK: - ShowOverviewController
 
 //MARK: - ShowSeasonsController
-extension UIStoryboardSegue {
-    func selection() -> ShowSeasonsController.Segue? {
-        if let identifier = self.identifier {
-            return ShowSeasonsController.Segue(rawValue: identifier)
-        }
-        return nil
-    }
-}
-
-extension ShowSeasonsController { 
-
-    enum Segue: String, Printable, SegueProtocol {
-        case seasons_to_episodes = "seasons_to_episodes"
-
-        var kind: SegueKind? {
-            switch (self) {
-            case seasons_to_episodes:
-                return SegueKind(rawValue: "show")
-            default:
-                preconditionFailure("Invalid value")
-                break
-            }
-        }
-
-        var destination: UIViewController.Type? {
-            switch (self) {
-            case seasons_to_episodes:
-                return EpisodesListViewController.self
-            default:
-                assertionFailure("Unknown destination")
-                return nil
-            }
-        }
-
-        var identifier: String? { return self.description } 
-        var description: String { return self.rawValue }
-    }
-
-}
 extension ShowSeasonsController { 
 
     enum Reusable: String, Printable, ReusableProtocol {

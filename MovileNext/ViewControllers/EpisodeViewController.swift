@@ -47,7 +47,6 @@ class EpisodeViewController: UIViewController {
         loadEpisode()
     }
 
-    
     func loadEpisode() {
         self.navigationItem.title = show?.title
         
@@ -68,12 +67,7 @@ class EpisodeViewController: UIViewController {
             coverImageView.image = placeHolder
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     @IBAction func sharedPressed(sender: UIBarButtonItem) {
         if let imdb = show?.identifiers.imdb {
             let serieImdb = "http://www.imdb.com/title/\(imdb)/"
@@ -84,15 +78,4 @@ class EpisodeViewController: UIViewController {
             presentViewController(vc, animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

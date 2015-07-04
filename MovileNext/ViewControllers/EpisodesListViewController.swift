@@ -24,26 +24,26 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        let seasonNumber = season!.number
-        
-        if seasonNumber != 0 {
-            self.navigationItem.title = "Season \(seasonNumber)"
-        } else {
-            self.navigationItem.title = "Specials"
+        if let seasonNumber = season?.number {
+            if seasonNumber != 0 {
+                self.navigationItem.title = "Season \(seasonNumber)"
+            } else {
+                self.navigationItem.title = "Specials"
+            }
+            
+            if let slug = show?.identifiers.slug {
+                trakt.getEpisodes(slug, season: seasonNumber) { result in
+                    if let value = result.value {
+                        self.episodes = value
+                    }
+                    
+                    self.tableView.reloadData()
+                }
+            }
         }
 
         tableView.delegate = self
         tableView.dataSource = self
-        
-        if let slug = show?.identifiers.slug {
-            trakt.getEpisodes(slug, season: seasonNumber) { result in
-                if let value = result.value {
-                    self.episodes = value
-                }
-                
-                self.tableView.reloadData()
-            }
-        }
     }
     
     func seasonsController(vc: ShowSeasonsController, didSelectSeason season: Season) {
@@ -71,7 +71,17 @@ class EpisodesListViewController: UIViewController, UITableViewDelegate, UITable
         
         let row = indexPath.row
         cell.textLabel?.text = String(format: "S%02dE%02d", season!.number, indexPath.row + 1)
-        cell.detailTextLabel?.text = episodes[row].title
+        
+        
+        if let title = episodes[row].title {
+            if title.isEmpty || title == "TBA" {
+                cell.detailTextLabel?.text = "to be announced"
+            } else {
+                cell.detailTextLabel?.text = title
+            }
+        } else {
+            cell.detailTextLabel?.text = "to be announced"            
+        }
         
         return cell
     }

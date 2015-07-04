@@ -10,6 +10,7 @@ import UIKit
 import TraktModels
 
 let reuseIdentifier = "Cell"
+let notKey = "com.movile.up.favorites"
 
 class ShowCollectionViewController: UIViewController,
                                     UICollectionViewDataSource,
@@ -18,6 +19,10 @@ class ShowCollectionViewController: UIViewController,
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var navegationBar: UINavigationBar!
+    
+    @IBOutlet weak var segmentedControlView: UISegmentedControl!
+
     let trakt = TraktHTTPClient()
     
     var shows : [Show] = []
@@ -32,13 +37,17 @@ class ShowCollectionViewController: UIViewController,
         collectionView.delegate = self
         collectionView.dataSource = self
        
-        trakt.getPopularShows() { result in
-              let showResult = result.value!
-              for show in showResult {
-                self.shows.append(show)
-              }
-            
-            self.collectionView.reloadData()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onListenToNotification", name: notKey, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(notKey, object: self)
+    }
+    
+    func onListenToNotification() {
+        let selectedIndex = self.segmentedControlView.selectedSegmentIndex
+        
+        if selectedIndex == 0 {
+            refreshList(false)
+        } else {
+            refreshList(true)
         }
     }
 
@@ -52,10 +61,32 @@ class ShowCollectionViewController: UIViewController,
         }
     }
     
+    func refreshList(showOnlyFav: Bool) {
+        self.shows.removeAll(keepCapacity: true)
+        
+        trakt.getPopularShows() { result in
+            let showResult = result.value!
+            for show in showResult {
+                if(!showOnlyFav || FavoritesManager.isFavorite(show.identifiers.trakt)) {
+                    self.shows.append(show)
+                }
+            }
+            
+            self.collectionView.reloadData()
+        }
+    }
+    
+    @IBAction func onSeguimentionBarChanged(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(notKey, object: self)
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hideBottomHairline()
+    }
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
-
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shows.count
