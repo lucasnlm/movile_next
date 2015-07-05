@@ -23,9 +23,13 @@ class ShowCollectionViewController: UIViewController,
     
     @IBOutlet weak var segmentedControlView: UISegmentedControl!
 
+    @IBOutlet weak var pageController: UIPageControl!
+    
     let trakt = TraktHTTPClient()
     
     var shows : [Show] = []
+    
+    var totalPages = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +45,17 @@ class ShowCollectionViewController: UIViewController,
         NSNotificationCenter.defaultCenter().postNotificationName(notKey, object: self)
     }
     
+    @IBAction func onChangePage(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(notKey, object: self)
+    }
+    
     func onListenToNotification() {
         let selectedIndex = self.segmentedControlView.selectedSegmentIndex
         
         if selectedIndex == 0 {
-            refreshList(false)
+            refreshList(false, clearAll: true)
         } else {
-            refreshList(true)
+            refreshList(true, clearAll: true)
         }
     }
 
@@ -61,10 +69,30 @@ class ShowCollectionViewController: UIViewController,
         }
     }
     
-    func refreshList(showOnlyFav: Bool) {
-        self.shows.removeAll(keepCapacity: true)
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            let selectedIndex = self.segmentedControlView.selectedSegmentIndex
+            
+            if selectedIndex == 0 {
+                refreshList(false, clearAll: false)
+            } else {
+                refreshList(true, clearAll: false)
+            }
+           // self.collectionView.reloadData()
+        }
+    }
+    
+    func refreshList(showOnlyFav: Bool, clearAll: Bool) {
+        if clearAll {
+            self.shows.removeAll(keepCapacity: true)
+            totalPages = 1
+        } else {
+            totalPages++
+        }
         
-        trakt.getPopularShows() { result in
+        trakt.getPopularShows(totalPages) { result in
             let showResult = result.value!
             for show in showResult {
                 if(!showOnlyFav || FavoritesManager.isFavorite(show.identifiers.trakt)) {
@@ -102,6 +130,17 @@ class ShowCollectionViewController: UIViewController,
         cell.loadShow(show)
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
+        pulseAnimation.duration = 0.35
+        pulseAnimation.fromValue = 0.7
+        pulseAnimation.toValue = 1.0
+        pulseAnimation.autoreverses = false
+        pulseAnimation.repeatCount = 1
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        cell.layer.addAnimation(pulseAnimation, forKey: nil)
     }
 
     func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {

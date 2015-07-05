@@ -128,9 +128,9 @@ class ShowDetailsController : UIViewController, SeasonsTableViewControllerDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue == Segue.details_to_seasons {
             seasonViewController = segue.destinationViewController as! ShowSeasonsController
-            seasonViewController.seasons = seasons
-            seasonViewController.show = show
             seasonViewController.delegate = self
+            seasonViewController.loadSeasons(seasons)
+            seasonViewController.show = show
         }
         
         if segue == Segue.details_to_overview {
