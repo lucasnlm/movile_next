@@ -97,6 +97,21 @@ class ShowDetailsController : UIViewController, SeasonsTableViewControllerDelega
     
     @IBAction func favoritePressed(sender: UIButton) {
         sender.selected = !sender.selected
+        
+        // Basic Animation
+        let favorited = sender.selected
+        UIView.transitionWithView(sender, duration: 0.4, options: .TransitionCrossDissolve, animations: {sender.selected = favorited}, completion: nil)
+        
+        // Core Animation
+        let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
+        pulseAnimation.duration = 0.2
+        pulseAnimation.fromValue = 1
+        pulseAnimation.toValue = favorited ?  1.2 : 0.8
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = 1
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        sender.layer.addAnimation(pulseAnimation, forKey: nil)
+        
 
         if let showId = show?.identifiers.trakt {
             if sender.selected {
